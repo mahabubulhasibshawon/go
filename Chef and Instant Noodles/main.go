@@ -110,10 +110,4 @@ func main() {
 	var X, Y int
 	fmt.Scan(&X, &Y)
 	fmt.Print(X * Y)
-	var X, Y int
-	fmt.Scan(&X, &Y)
-	fmt.Print(X * Y)
-	var X, Y int
-	fmt.Scan(&X, &Y)
-	fmt.Print(X * Y)
 }
