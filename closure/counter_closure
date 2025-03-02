@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func idGenerator() func() int {
+	id := 0
+	return func() int {
+		id++
+		return id
+	}
+}
+
+func main() {
+	nextID := idGenerator()
+	fmt.Println(nextID()) // 1
+	fmt.Println(nextID()) // 2
+	fmt.Println(nextID()) // 3
+}
