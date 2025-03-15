@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var arr1 = [3]int{1, 3, 4}
+	myArray := [...]int{1, 2, 3}
 
-	fmt.Println(arr1)
+	for i := 0; i < len(myArray); i++ {
+		fmt.Println(i)
+	}
 }
