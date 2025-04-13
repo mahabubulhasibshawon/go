@@ -36,4 +36,5 @@ func main() {
 	fmt.Println("sum : ", addAll(a...))
 	fmt.Println("average : ", avgAll(a...))
 	fmt.Println("max : ", maxNum(a...))
+	fmt.Println("min : ", maxNum(a...))
 }
