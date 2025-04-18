@@ -31,10 +31,23 @@ func maxNum(nums ...int) int {
 	return max
 }
 
+func minNum(nums ...int) int {
+	if len(nums) == 0 {
+		panic("no numbers found")
+	}
+	min := nums[0]
+	for _, n := range nums[1:] {
+		if n < min {
+			min = n
+		}
+	}
+	return min
+}
+
 func main() {
 	a := []int{5, 10, 15}
 	fmt.Println("sum : ", addAll(a...))
 	fmt.Println("average : ", avgAll(a...))
 	fmt.Println("max : ", maxNum(a...))
-	fmt.Println("min : ", maxNum(a...))
+	fmt.Println("min : ", minNum(a...))
 }
