@@ -1,4 +1,3 @@
-Sure! Here's a simple and clear `README.md` file for your **Go CLI To-Do App** with deadlines:
 
 ---
 
