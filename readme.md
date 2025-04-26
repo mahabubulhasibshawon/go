@@ -16,6 +16,7 @@ Go (Golang) is a statically typed, compiled programming language designed for si
 10. [Anonymous Function](#anonymous-function)
 11. [Scope](#scope)
 12. [Variable Shadowing](#variable-shadowing)
+13. [Internal Memory](#internal-memory)
 
 ---
 
@@ -232,6 +233,80 @@ func example() {
     x := 20 // Shadows global x
     fmt.Println(x) // Prints 20
 }
+```
+
+
+## Internal Memory
+
+![internalmemory1](image.png)
+
+when we run a go program It mainly take space in ram and create 4 segments 
+
+ 
+
+- Code Segment
+- Data Segment
+- Stack
+- Heap
+
+> at compile time go reads the full code and keep at respective part
+> 
+> - keep all func at code segments
+> - keep all global var in data segment
+> - when func executes stack frame is created at stack like when init executes.. it will create stack frame for init , again when main executes it wil create for main and for all other functions it will do the same
+
+```go
+package main
+import ("fmt")
+
+var a int = 10 // global var .. it will go to data segment
+
+func myMessage() {
+  fmt.Println("I just got executed!")
+}
+
+func main() {
+  myMessage() // call the function
+}
+
+/*
+myMessage()
+main()
+functions will store at code segment
+*/
+```
+
+here in the image we can see when main and add functions are invoked , it creates stack frames at stack segment![alt text](image-1.png)
+
+here in the image we can see when main and add functions are invoked , it creates stack frames at stack segment
+
+### Code Segment:
+
+Code segment store functions. All functions created are stored here. when we run program it call it’s functions
+
+The **text segment** (also known as **code segment)** is where the executable code of the program is stored. It contains the compiled machine code of the program’s functions and instructions. This segment is usually read-only and stored in the lower parts of the memory to prevent accidental modification of the code while the program is running.
+
+The size of the text segment is determined by the number of instructions and the complexity of the program.
+
+### Data Segment:
+
+The **data segment** stores global and static variables that are created by the programmer. It is present just above the code segment of the program. It can be further divided into two parts:
+
+<aside>
+💡
+
+All global memory stored in data segment
+
+</aside>
+
+### Stack:
+
+The **stack** is a region of memory used for **local variables** and function call management. Each time a function is called, a **stack frame** is created to store local variables, function parameters, and return addresses. This stack frame is stored in this segment.
+
+### Heap:
+
+```go
+// code
 ```
 
 ---

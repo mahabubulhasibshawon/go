@@ -56,12 +56,6 @@ Choose an option:
 
 ---
 
-## 🤔 Why use `bufio`?
-
-We use `bufio.NewReader(os.Stdin)` to read full lines of input (including spaces) from the user. It more flexible than `fmt.Scan` and handles user input in a cleaner way.
-
----
-
 ## 📂 Project Structure
 
 ```
