@@ -238,7 +238,10 @@ func example() {
 
 ## Internal Memory
 
+
+
 ![internalmemory1](image.png)
+
 
 when we run a go program It mainly take space in ram and create 4 segments 
 
