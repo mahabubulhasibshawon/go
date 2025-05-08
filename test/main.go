@@ -2,14 +2,13 @@ package main
 
 import "fmt"
 
-var a = 10 // data  segmetn
-
 func main() {
-	fmt.Println(a)
-}
-
-func init() {
-	fmt.Println("init")
-	a = 20
-	fmt.Println(a)
+	var t int
+	fmt.Scan(&t)
+	for i:= 0 ; i < t; i++ {
+		var n int
+		fmt.Scan(&n)
+	req_berry := n * 3
+	fmt.Println((req_berry * 4)/6)
+	}
 }
