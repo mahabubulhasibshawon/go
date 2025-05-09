@@ -35,7 +35,7 @@ func RemoveSpecificElement(input []int, element int) {
 		if value ==  element{
 			continue
 		}
-		removedSlice := append(removedSlice , input...)
+		// removedSlice := append(removedSlice , input...)
 	}
-	return removedSlice
+	// return removedSlice
 }
